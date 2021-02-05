@@ -41,8 +41,8 @@ export const BlogInput = () => {
     useEffect(() => {
         const length = fields.length
         let updated
-        length === 2 ? updated = 1 + "min read" :
-            length === 4 ? updated = 2 + "min read" :
+        length <= 2 ? updated = 1 + "min read" :
+            length <= 4 ? updated = 2 + "min read" :
             updated = 4 + "min read"
         setTime(updated)
     }, [fields])

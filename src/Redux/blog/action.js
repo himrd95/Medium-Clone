@@ -31,6 +31,7 @@ const getDataRequest = () => {
 }
 
 const getDataSuccess = (data) => {
+    console.log(data)
     return {
         type: GET_DATA_SUCCESS,
         data
@@ -57,7 +58,7 @@ export const postBlog = ( title, file, fields, time) => dispatch => {
 }
 
 export const fetchPostedData = () => dispatch => {
-    dispatch(getDataRequest)
+    dispatch(getDataRequest())
     axios.get('https://protected-mesa-68876.herokuapp.com/blog')
         .then((res) => {
         dispatch(getDataSuccess(res.data))

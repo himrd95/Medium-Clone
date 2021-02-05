@@ -50,16 +50,12 @@ return datas === undefined || datas.length === 0 ? ( <div></div>
     <>
         <BlogNavbar />
         <div className = {styles.blog}>
-            <div className = {styles.img_div}>
-                <img src={datas.mainimg} alt="pic"/>
-            </div>
             <BlogContent content = {datas} handleLike = {handleLike} add = {add} reload = {reload}/>
             <BlogStories allData = {allData} />
             <BlogFooter />
         </div>
     </>
 )
-    
 }
 
 export {Blog}

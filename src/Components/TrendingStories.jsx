@@ -5,6 +5,7 @@ import { useHistory } from "react-router-dom";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import { setRecent } from "../Redux/trendings/actions";
 
+
 const TrendingStories = () => {
   const details = useSelector((state) => state.trend.details);
   const { data, isLoading } = details;
@@ -13,7 +14,7 @@ const TrendingStories = () => {
 
   const redirectUser = (id) => {
     history.push(`/blogs/${id}`);
-    dispatch(setRecent(id));
+    // dispatch(setRecent(id));
   };
 
   return isLoading ? (

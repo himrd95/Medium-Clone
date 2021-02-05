@@ -63,9 +63,9 @@ function Search() {
           type="text"
           onChange={(e) => dispatch(searchSuc(e.target.value))}
           style={{
-            width: "800px",
-            height: "80px",
-            margin: "50px 350px ",
+            width: "700px",
+            height: "70px",
+            margin: "50px 300px 0px 180px ",
             fontSize: "40px",
           }}
         />

@@ -1,58 +1,63 @@
-.sidebar{
-    width: 250px;
-    height: 500px;
-    border: 1px solid  #DEDEDC;
-    overflow-x: hidden;
-    overflow-y: auto;
+.sidebar {
+  width: 260px;
+  height: 600px;
+  border: 1px solid #dededc;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: absolute;
+  top: 100px;
+  right: 40px;
+  text-align: left;
+  z-index: 5;
+  background: white;
 }
-.userblock{
-    display: flex;
-    align-items: center;
-    
+.userblock {
+  display: flex;
+  align-items: center;
 }
-.userpic{
-    width: 50px;
-    height: 50px;
-    border-radius: 25px;
-    margin: 15px;
+.userpic {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  margin: 15px;
 }
 
-.storylink{
-    text-decoration: none;
-    color: #696767;
-    font-size: 14px;
+.storylink {
+  text-decoration: none;
+  color: #696767;
+  font-size: 14px;
 }
-.storylink:hover{
-    color: black;
+.storylink:hover {
+  color: black;
 }
-.stories{
-    display: flex;
-    flex-direction: column;
-    border-top: 1px solid  #DEDEDC;
-    height: 180px;
-    justify-content: space-evenly;
-    padding-left: 15px;
+.stories {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #dededc;
+  height: 180px;
+  justify-content: space-evenly;
+  padding-left: 15px;
 }
-.reading{
-    display: flex;
-    flex-direction: column;
-    border-top: 1px solid  #DEDEDC;
-    height: 150px;
-    justify-content: space-evenly;
-    padding-left: 15px;
+.reading {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #dededc;
+  height: 150px;
+  justify-content: space-evenly;
+  padding-left: 15px;
 }
-.signout{
-    display: flex;
-    flex-direction: column;
-    border-top: 1px solid #DEDEDC;
-    height: 120px;
-    justify-content: space-evenly;
-    padding-left: 15px;
+.signout {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #dededc;
+  height: 120px;
+  justify-content: space-evenly;
+  padding-left: 15px;
 }
-.privacy{
-    display: flex;
-    align-items: center;
-    padding-left: 15px;
-    border-top: 1px solid #DEDEDC;
-    height: 40px;
+.privacy {
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  border-top: 1px solid #dededc;
+  height: 40px;
 }

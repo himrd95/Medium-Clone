@@ -1,51 +1,52 @@
 .container {
-  width: 50%;
-  margin-left: 10%;
+	width: 50%;
+	margin-left: 10%;
+	text-align: left;
 }
 .container h2 {
-  font-size: 1.5em;
-  color: rgba(41, 41, 41, 1);
-  font-weight: 600;
-  font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 1.5em;
+	color: rgba(41, 41, 41, 1);
+	font-weight: 600;
+	font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .headers {
-  display: flex;
-  height: 45px;
-  font-weight: 400;
-  border-bottom: 1px solid rgb(211, 211, 211);
+	display: flex;
+	height: 45px;
+	font-weight: 400;
+	border-bottom: 1px solid rgb(211, 211, 211);
 }
 .links {
-  text-decoration: none;
-  margin-right: 20px;
-  font-size: 14px;
-  line-height: 40px;
-  color: #7c7b7b;
+	text-decoration: none;
+	margin-right: 20px;
+	font-size: 14px;
+	line-height: 40px;
+	color: #7c7b7b;
 }
 .links:hover {
-  color: #161616;
-  border-bottom: 1px solid gray;
+	color: #161616;
+	border-bottom: 1px solid gray;
 }
 .archived {
-  background-color: #fafafa;
-  max-width: 100%;
-  margin-top: 20px;
-  display: flex;
-  align-items: center;
-  padding-right: 100px;
+	background-color: #fafafa;
+	max-width: 100%;
+	margin-top: 20px;
+	display: flex;
+	align-items: center;
+	padding-right: 100px;
 }
 .archived div {
-  color: gray;
-  font-size: 16px;
+	color: gray;
+	font-size: 16px;
 }
 .archived_btn {
-  /* width: 70px; */
-  height: 40px;
-  color: white;
-  background-color: green;
-  border: none;
-  padding: 10px;
-  border-radius: 5px;
-  letter-spacing: 0;
-  font-size: 14px;
-  margin: 20px 0;
+	/* width: 70px; */
+	height: 40px;
+	color: white;
+	background-color: green;
+	border: none;
+	padding: 10px;
+	border-radius: 5px;
+	letter-spacing: 0;
+	font-size: 14px;
+	margin: 20px 0;
 }

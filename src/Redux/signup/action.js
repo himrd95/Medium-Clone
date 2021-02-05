@@ -108,7 +108,7 @@ const getProfile = (payload) => (dispatch) => {
   return axios
     .get("https://protected-mesa-68876.herokuapp.com/users")
     .then((res) => {
-      console.log(res.data[0].profileObj);
+      console.log(res.data[res.data.length - 1].profileObj);
       dispatch(profileSuc(res.data[res.data.length - 1].profileObj));
       // dispatch(profileSuc(payload));
     })

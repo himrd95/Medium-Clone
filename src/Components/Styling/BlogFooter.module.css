@@ -1,4 +1,6 @@
 .footer{
+    position: fixed;
+    bottom: 0;
     background-color: black;
     color: white;
     display: flex;
@@ -21,6 +23,8 @@
     cursor: pointer;
 }
 .footer_div{
+    position: fixed;
+    /* bottom: 40px; */
     background-color: black;
     display: flex;
     margin: 10px auto;
