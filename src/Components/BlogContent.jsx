@@ -1,20 +1,32 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from "./Styling/BlogPage.module.css"
 import { Link } from "react-router-dom"
 import { FaTwitter, FaFacebook, FaLinkedin } from "react-icons/fa";
 import { BiLike, BiMessageRounded } from "react-icons/bi";
 import { BsBookmark } from "react-icons/bs";
 import { TemporaryDrawer } from "./TemporaryDrawer"
+import { Redirect, useHistory } from "react-router-dom"
+import { userAuth } from "./Utils/BlogResponse.js"
 
 const BlogContent = ({content, handleLike, add}) => {
     const {dis, para, readtime, likes, id, response} = content
-    console.log(content)
+    const history = useHistory()
     const [state, setState] = React.useState({
         right: false
       });
+      const [isAuth, setIsAuth] = useState(false);
 
+      useEffect(() => {
+          authUser()
+      }, []);
+
+        const authUser = () => {
+            // setIsAuth(userAuth())
+        }
+         
       const toggleDrawer = (event) => {
-          console.log(event);
+          if(isAuth){
+              console.log(isAuth)
         if (
           event.type === "keydown" &&
           (event.key === "Tab" || event.key === "Shift")
@@ -22,6 +34,10 @@ const BlogContent = ({content, handleLike, add}) => {
           return;
         }
         setState({ ...state, right: !state.right });
+          }
+          else {
+              history.push("/sign-in")
+          }
       };
 
     return (
