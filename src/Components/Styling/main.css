@@ -1,137 +1,163 @@
 .nav {
-  display: flex;
-  margin-top: 30px;
+	display: flex;
+	align-items: center;
+	/* background: rgb(216, 214, 214); */
+	top: 0;
+	left: 0;
 }
 
 .nav > div > img {
-  margin: 10px 10px 10px 120px;
-  width: 200px;
-  height: 50px;
+	margin: 10px 10px 10px 80px;
+	width: 200px;
+	height: 50px;
 }
 
 .signin {
-  text-align: center;
-  margin: 70px auto;
-  padding: 10px;
-  width: 600px;
-  height: 550px;
-  border: 1px solid grey;
-  border-radius: 8px;
+	text-align: center;
+	margin: 70px auto;
+	padding: 10px;
+	width: 600px;
+	height: 550px;
+	border: 1px solid grey;
+	border-radius: 8px;
 }
 
 .icon {
-  margin: 1px 0px 0px 300px;
-  font-size: larger;
-  color: black;
+	margin: 1px 0px 0px 300px;
+	font-size: larger;
+	color: black;
 }
 
 .upgrade {
-  background-color: green;
-  color: white;
-  border-radius: 5px;
-  width: 100px;
-  height: 30px;
-  text-align: center;
-  font-size: 15px;
-  margin: auto;
+	background-color: green;
+	color: white;
+	border-radius: 5px;
+	width: 90px;
+	height: 35px;
+	text-align: center;
+	font-size: 15px;
+	margin: auto 5px;
+	border: none;
 }
 
 .sec {
-  padding: 18px;
+	padding: 18px;
+	display: flex;
+	align-items: center;
 }
-
+.searchIcon {
+	font-size: 20px;
+	margin: 0 10px;
+	color: gray;
+}
 .ico {
-  margin: 8px 4px 0px 4px;
+	font-size: 25px;
+	margin: 0 10px;
+	color: gray;
 }
 
 .sec :hover {
-  cursor: pointer;
+	cursor: pointer;
 }
 
+.sec input {
+	border: none;
+	height: 30px;
+	padding: 0 10px;
+	width: 100px;
+	outline: none;
+	cursor: text;
+	font-size: 20px;
+}
+::placeholder {
+	color: gray;
+	font-weight: 300;
+	font-size: 15px;
+}
 .card {
-  width: 400px;
-  height: 400px;
-  margin: 20px 50px;
+	width: 400px;
+	height: 400px;
+	margin: 20px 50px;
 }
 
 .card img {
-  width: 300px;
-  height: 250px;
+	width: 300px;
+	height: 250px;
 }
 
 .card h4 {
-  color: grey;
+	color: grey;
 }
 
 .med {
-  display: flex;
-  flex-wrap: wrap;
-  width: 750px;
+	display: flex;
+	flex-wrap: wrap;
+	width: 750px;
 }
 
 .flex {
-  display: flex;
-  flex-wrap: wrap;
-  /* margin: 10px 150px; */
+	display: flex;
+	flex-wrap: wrap;
+	/* margin: 10px 150px; */
 }
 
 .twitbtn {
-  background-color: white;
-  width: 200px;
-  height: 40px;
-  border-radius: 5px;
-  font-size: 15px;
-  border: 0.5px solid grey;
-  display: flex;
-  margin: 20px auto;
-  flex-wrap: wrap;
-  justify-content: center;
-  /* align-items: center; */
+	background-color: white;
+	width: 200px;
+	height: 40px;
+	border-radius: 5px;
+	font-size: 15px;
+	border: 0.5px solid grey;
+	display: flex;
+	margin: 20px auto;
+	flex-wrap: wrap;
+	justify-content: center;
+	/* align-items: center; */
 }
 
 .twitbtn p {
-  margin-top: 10px;
+	margin-top: 10px;
 }
 .twitter {
-  text-align: center;
-  margin: 100px 0px 0px 100px;
-  /* align-items: center; */
+	text-align: center;
+	margin: 100px 0px 0px 100px;
+	/* align-items: center; */
 }
 
 .second {
-  width: 370px;
-  height: 140px;
-  display: flex;
-  padding: 5px;
-  flex-wrap: wrap;
-  justify-content: space-between;
+	width: 370px;
+	height: 140px;
+	display: flex;
+	padding: 5px;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }
 
 .second img {
-  width: 100px;
-  height: 70px;
+	width: 100px;
+	height: 70px;
 }
 
 .avatar > img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
 }
 
 .avatar {
-  width: 150px;
-  margin-bottom: 0px;
+	width: 150px;
+	margin-bottom: 0px;
 }
 
 .first {
-  margin: 10px 10px 0px 100px;
+	margin: 10px 10px 0px 100px;
 }
 
 .first img {
-  width: 400px;
-  height: 350px;
+	width: 400px;
+	height: 350px;
 }
 
 .searchcards {
-  margin: 50px 50px 20px 350px;
+	margin: 50px 50px 20px 350px;
 }

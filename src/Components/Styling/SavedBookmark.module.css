@@ -1,51 +1,52 @@
 .card {
-  width: 85%;
-  padding: 10px;
-  padding-left: 0;
-  margin: 25px 200;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #d8d6d6;
-  display: flex;
-  justify-content: space-between;
-  /* background: rgb(221, 221, 221); */
+	max-width: 85%;
+	padding: 10px;
+	padding-left: 0;
+	margin: 25px 0;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #d8d6d6;
+	display: flex;
+	justify-content: space-between;
+	/* background: rgb(221, 221, 221); */
 }
 .title {
-  line-height: 30px;
-  font-size: 18px;
-  font-weight: 700;
+	line-height: 30px;
+	font-size: 18px;
+	font-weight: 700;
 }
+
 .card > div:first-child > div:nth-child(2) {
-  font-size: 18px;
-  color: gray;
+	font-size: 18px;
+	color: gray;
 }
 .info {
-  display: flex;
-  margin-top: 20px;
-  font-size: 13px;
+	display: flex;
+	margin-top: 20px;
+	font-size: 13px;
 }
 .info > div:first-child,
 .info > div:nth-child(2) {
-  color: green;
-  margin-right: 10px;
+	color: green;
+	margin-right: 10px;
 }
 .footer {
-  display: flex;
-  font-size: 18px;
-  color: gray;
-  margin: 15px;
-  margin-left: 0;
+	display: flex;
+	font-size: 18px;
+	color: gray;
+	margin: 15px;
+	margin-left: 0;
 }
 .footer div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 10px;
 }
 .footer i {
-  margin-right: 5px;
-  margin-top: 3px;
+	margin-right: 5px;
+	margin-top: 3px;
 }
 .card img {
-  width: 100px;
-  height: 100px;
+	width: 100px;
+	height: 100px;
 }

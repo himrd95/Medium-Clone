@@ -14,6 +14,7 @@ import { AiOutlineCheckCircle } from "react-icons/ai";
 import { FaTwitter } from "react-icons/fa";
 import Bottom from "./Bottom";
 import SideNavbar from "./SideNavbar";
+import { greetingTime } from 'greeting-time';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -26,13 +27,12 @@ const useStyles = makeStyles((theme) => ({
 
 function Main() {
   const data = useSelector((state) => state.signup.data);
-  console.log(data);
   const [query, setQuery] = React.useState("");
   const classes = useStyles();
   const blogs = useSelector((state) => state.signup.blog);
   const dispatch = useDispatch();
   const greetingTime = require("greeting-time");
-
+  const[open,setOpen] = React.useState(false)
   const getBlogs = () => {
     dispatch(getSearch());
   };
@@ -52,7 +52,7 @@ function Main() {
     history.push(`/search/${query}`);
   };
   return (
-    <div className="main  ">
+    <div className="main">
       <div className="nav">
         <div className="med">
           <img
@@ -62,29 +62,29 @@ function Main() {
           <h2>{greetingTime(new Date())}</h2>
         </div>
         <div className="sec">
-          <input type="text" onChange={(e) => setQuery(e.target.value)} />
-          <BsSearch className="ico" onClick={() => enterPress(query)} />
+          <input type="text" placeholder="Search Medium" onChange={(e) => setQuery(e.target.value)} />
+          <BsSearch className="searchIcon" onClick={() => enterPress(query)} />
           <Link to="/book">
-            <BsBookmarks className="ico" />
+            <BsBookmarks className="searchIcon" />
           </Link>
           <BiBell className="ico" />
           <button className="upgrade">Upgrade</button>
         </div>
-        <div>
+        <div onClick={()=>setOpen(prev=>!prev)}>
           <img
             src={data.imageUrl}
             alt="hi"
             style={{
               borderRadius: "50%",
-              width: "50px",
-              margin: "10px 0px 0px 0px",
+              width: "40px", height:'40px',
+              margin: "15px 0px 10px 0px",
               textAlign: "left",
             }}
           />
-          <button onClick={() => dispatch(googleAuth(false))}>signout</button>
+          {open&&<SideNavbar/>}
         </div>
       </div>
-      <div className="flex">
+      <div className="flex" onClick={()=>setOpen(false)}>
         <div className="first">
           {blogs
             .filter((item) => item.id <= 1)

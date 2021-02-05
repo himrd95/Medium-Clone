@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import CircularProgress from "@material-ui/core/CircularProgress";
 
+
 const TrendingStories = () => {
   const details = useSelector((state) => state.trend.details);
   const { data, isLoading } = details;

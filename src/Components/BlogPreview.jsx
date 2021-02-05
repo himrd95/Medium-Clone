@@ -1,9 +1,9 @@
 import React, {useEffect} from 'react'
-import { BlogNavbar } from '../Routes/BlogNavbar'
+import { BlogNavbar } from './BlogNavbar'
 import { useSelector, useDispatch } from "react-redux"
 import { useParams } from "react-router-dom"
 import { postBlogData, getblogData } from "../Components/Utils/blogLocalStorage"
-import styles from "../Components/Styling/blogPage.module.css"
+import styles from "./Styling/BlogPage.module.css"
 import { BlogContent } from './BlogContent'
 import { BlogStories } from './BlogStories'
 import { BlogFooter } from './BlogFooter'
@@ -11,7 +11,8 @@ import { fetchPostedData } from "../Redux/blog/action"
 
 
 const BlogPreview = () => {
-const details = useSelector(state => state.blog.details)
+    const details = useSelector(state => state.blog.details)
+    console.log(details)
 // const params = useParams()
 // const ID = Number(params.id)
 // const { data, isLoading } = details
@@ -33,7 +34,8 @@ return (
     <>
         <BlogNavbar />
         <div className = {styles.blog}>
-        <div className = {styles.content}>
+            <div className={styles.content}>
+                {/* left nav */}
                 <div className = {styles.left_nav}>
                     <h2>Public Stories</h2>
                     <h2>News, Updates & Insights from the Public.com Team</h2>
@@ -54,16 +56,17 @@ return (
                         <BsBookmark />
                     </div>
                 </div>
+{/* main cont */}
                 <div className = {styles.discription}>
                     <div className = {styles.heading}>
-                        <p>{dis}</p>
+                        {title}
                     </div>
-                    <div className = {styles.content_details}>
+                    {/* <div className = {styles.content_details}>
                         <div className = {styles.read}>
                             <img src="https://miro.medium.com/fit/c/96/96/1*c5c3KVN_jKPU4IKo4_xhiQ.png" alt="ball"/>
                             <div>
                                 <p>Public  <span>follow</span></p>
-                                <p className = {styles.grey}>Feb . {readtime}</p> 
+                                <p className = {styles.grey}>Feb . {time}</p> 
                             </div>
                         </div>
                         <div className = {styles.sociallinks}>
@@ -72,10 +75,15 @@ return (
                             <Link to = "/facebook.com"><FaFacebook /></Link>
                             <Link to = "/twitter.com"><BsBookmark /></Link>
                         </div>
-                    </div>
+                    </div> */}
                     <div className = {styles.para}>
-                        <p>{para}</p>
-                        <div className = {styles.flex}>
+                        {fields?.map(item => (
+                            <p>{ item.name }</p>
+                        ))}
+                        <div>
+                            <img src={file} alt=""/>
+                        </div>
+                        {/* <div className = {styles.flex}>
                             <div className = {styles.flex_div}>
                                 <div className = {styles.like}>
                                     <BiLike /> 
@@ -92,7 +100,7 @@ return (
                                 <Link to = "/facebook.com"><FaFacebook /></Link>
                                 <Link to = "/twitter.com"><BsBookmark /></Link>
                             </div>
-                        </div>
+                        </div> */}
                         <hr />
                     </div>
                 </div>
