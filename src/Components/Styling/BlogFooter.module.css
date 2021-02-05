@@ -1,0 +1,50 @@
+.footer{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 6% 2% 6%;
+    position: relative;
+    bottom: 0px;
+}
+
+.footer div {
+    display: flex;
+    font-size: 14px;
+}
+.footer div img{
+    width: 30%;
+}
+.footer div p{
+    margin: 10px;
+    cursor: pointer;
+}
+.footer_div{
+    background-color: black;
+    display: flex;
+    margin: 10px auto;
+    padding: 1% 6%;
+    margin-bottom: 0;
+}
+.footer_div div{
+    width: 31%;
+    margin: 1%;
+}
+.footer_div h2{
+    color: rgba(255, 255, 255, 0.98);
+    font-size: 16px;
+    font-weight: 550;
+    line-height: 24px;
+    font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0;
+    margin-bottom: 10px;
+}
+.footer_div h4{
+    font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    line-height: 20px;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 400;
+    margin: 0;
+}
