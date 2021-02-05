@@ -9,7 +9,7 @@ const redirectHomepage = () => {
 const BlogFooter = () => {
     return (
         <>
-        <div className = {styles.footer_div}>
+        {/* <div className = {styles.footer_div}>
             <div>
                 <h2>
                     Learn more
@@ -34,7 +34,7 @@ const BlogFooter = () => {
                 If you have a story to tell, knowledge to share, or a perspective to offer — welcome home. It’s easy and free to post your thinking on any topic. Write on Medium
                 </h4>
             </div>
-        </div>
+        </div> */}
         <div className = {styles.footer}>
             <div>
                 <img onClick = {redirectHomepage} src="https://miro.medium.com/max/500/1*Ra88BZ-CSTovFS2ZSURBgg.png" alt="medium"/>

@@ -5,8 +5,8 @@ import { FaTwitter, FaFacebook, FaLinkedin } from "react-icons/fa";
 import { BiLike, BiMessageRounded } from "react-icons/bi";
 import { BsBookmark } from "react-icons/bs";
 import { TemporaryDrawer } from "./TemporaryDrawer"
-import { Redirect, useHistory } from "react-router-dom"
-import { userAuth } from "./Utils/BlogResponse.js"
+import { useHistory, useParams } from "react-router-dom"
+import { userAuth, getUser,getResponse } from "./Utils/BlogResponse.js"
 
 const BlogContent = ({content, handleLike, add}) => {
     const {dis, para, readtime, likes, id, response} = content
@@ -15,18 +15,39 @@ const BlogContent = ({content, handleLike, add}) => {
         right: false
       });
       const [isAuth, setIsAuth] = useState(false);
+      const [profile, setProfile] = useState({});
+      const [data, setData] = useState({});
+      const [isLoading, setIsLoading] = useState(true);
 
+    const params = useParams()
+    let Id = params.id
+
+    useEffect(() => {
+        fetchData(Id)
+    }, [Id]);
+    
       useEffect(() => {
           authUser()
+          userDetails()
       }, []);
 
+      const fetchData = (Id) => {
+          getResponse(Id)
+          .then(res => setData(res.data))
+          setIsLoading(false)
+      }
+
         const authUser = () => {
-            // setIsAuth(userAuth())
+            setIsAuth(userAuth())
+        }
+
+        const userDetails = () => {
+            getUser()
+            .then(res => setProfile(res.data.profileObj))
         }
          
       const toggleDrawer = (event) => {
           if(isAuth){
-              console.log(isAuth)
         if (
           event.type === "keydown" &&
           (event.key === "Tab" || event.key === "Shift")
@@ -36,12 +57,17 @@ const BlogContent = ({content, handleLike, add}) => {
         setState({ ...state, right: !state.right });
           }
           else {
-              history.push("/sign-in")
+              history.push("/get-started")
           }
       };
 
-    return (
+    return !isLoading ?(
+        
         <>
+        {console.log(data.response)}
+        <div className = {styles.img_div}>
+                <img src={data.mainimg} alt="pic"/>
+            </div>
         <TemporaryDrawer id = {id} state = {state} toggleDrawer = {toggleDrawer}/>
             <div className = {styles.content}>
                 {/* Left content */}
@@ -58,7 +84,6 @@ const BlogContent = ({content, handleLike, add}) => {
                     </div>
                     <div className = {styles.like_buttons}>
                         <BiMessageRounded onClick = {(e) => {
-                            console.log('called')
                             toggleDrawer(e)
                         }}/>
                         <span>{response.length}</span>
@@ -90,7 +115,7 @@ const BlogContent = ({content, handleLike, add}) => {
                     </div>
                     {/* Paragraph */}
                     <div className = {styles.para}>
-                        <p>{para}</p>
+                        <p>{data.para}</p>
                         <div className = {styles.flex}>
                             <div className = {styles.flex_div}>
                                 <div className = {styles.like}>
@@ -116,7 +141,7 @@ const BlogContent = ({content, handleLike, add}) => {
                 </div>
             </div>
         </>
-    )
+    ) : ( <div>...Loading</div>)
 }
 
 export { BlogContent }
