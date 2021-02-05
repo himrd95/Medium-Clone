@@ -1,16 +1,19 @@
 import React from "react";
 import styles from "./Styling/LandingPage.module.css";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import CircularProgress from "@material-ui/core/CircularProgress";
+import { setRecent } from "../Redux/trendings/actions";
 
 const TrendingStories = () => {
   const details = useSelector((state) => state.trend.details);
   const { data, isLoading } = details;
   const history = useHistory();
+  const dispatch = useDispatch();
 
   const redirectUser = (id) => {
     history.push(`/blogs/${id}`);
+    dispatch(setRecent(id));
   };
 
   return isLoading ? (

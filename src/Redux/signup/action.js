@@ -109,7 +109,7 @@ const getProfile = (payload) => (dispatch) => {
     .get("https://protected-mesa-68876.herokuapp.com/users")
     .then((res) => {
       console.log(res.data[0].profileObj);
-      dispatch(profileSuc(res.data[0].profileObj));
+      dispatch(profileSuc(res.data[res.data.length - 1].profileObj));
       // dispatch(profileSuc(payload));
     })
     .catch((err) => console.log(err));

@@ -27,25 +27,24 @@ const useStyles = makeStyles( (theme) => ({
 
 const TemporaryDrawer = ({state, toggleDrawer, id}) => {
   const classes = useStyles();
-  
+
   const [comment, setComment] = useState("");
     const [data, setData] = useState({});
     const [response, setResponse] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [hidden, setHidden] = useState(true);
-    
-    
+
+
     useEffect(() => {
         handleResponse()
     }, []);
-    
+
     const handleResponse = () => {
         getResponse(id)
         .then((res) => {
             setData(res.data)
             setResponse(res.data.response)
             setIsLoading(false)
-            console.log(res.data)
         })
     }
 
@@ -75,7 +74,7 @@ const TemporaryDrawer = ({state, toggleDrawer, id}) => {
               <textarea type="text" style = {hidden? {height : "20px"} : {height : "40px"}}
               placeholder = "What are your thoughts?"
               onChange = {(e) => setComment(e.target.value)}
-              
+
               />
               <div className = {styles.form_btn} style = {hidden? {display : "none"} : {display : "flex"}}>
               <Button onClick = {() => setHidden(!hidden)} variant="contained" color = "">Cancel</Button>
@@ -92,7 +91,7 @@ const TemporaryDrawer = ({state, toggleDrawer, id}) => {
       </div>
       </>
     );
-  
+
 
   return (
     <div>

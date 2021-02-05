@@ -12,6 +12,7 @@ import { TrendingStories } from "./TrendingStories";
 import styles from "./Styling/LandingPage.module.css";
 import { AiOutlineCheckCircle } from "react-icons/ai";
 import { FaTwitter } from "react-icons/fa";
+import { BsBell } from "react-icons/bs";
 import Bottom from "./Bottom";
 import SideNavbar from "./SideNavbar";
 
@@ -26,7 +27,6 @@ const useStyles = makeStyles((theme) => ({
 
 function Main() {
   const data = useSelector((state) => state.signup.data);
-  console.log(data);
   const [query, setQuery] = React.useState("");
   const classes = useStyles();
   const blogs = useSelector((state) => state.signup.blog);
@@ -39,12 +39,12 @@ function Main() {
 
   React.useEffect(() => {
     getBlogs();
-    dispatch(getProfile());
+    // dispatch(getProfile());
   }, [dispatch, data]);
 
-  // React.useEffect(() => {
-  //   dispatch(getProfile());
-  // }, []);
+  React.useEffect(() => {
+    dispatch(getProfile());
+  }, []);
 
   const history = useHistory();
 
@@ -62,13 +62,20 @@ function Main() {
           <h2>{greetingTime(new Date())}</h2>
         </div>
         <div className="sec">
-          <input type="text" onChange={(e) => setQuery(e.target.value)} />
+          <input
+            type="text"
+            onChange={(e) => setQuery(e.target.value)}
+            style={{ marginTop: 0, height: "20px    " }}
+          />
           <BsSearch className="ico" onClick={() => enterPress(query)} />
           <Link to="/book">
             <BsBookmarks className="ico" />
           </Link>
-          <BiBell className="ico" />
-          <button className="upgrade">Upgrade</button>
+          <BsBell className="ico" />
+          {/* <button className="upgrade">Upgrade</button> */}
+          <Button variant="outlined" color="primary">
+            Upgrade
+          </Button>
         </div>
         <div>
           <img
@@ -93,6 +100,7 @@ function Main() {
                 <img src={item.mainimg} alt="hi" />
                 <h2>{item.title}</h2>
                 <h4>{item.dis}</h4>
+                <p>{item.readtime}</p>
               </div>
             ))}
         </div>
@@ -116,7 +124,11 @@ function Main() {
                   <img
                     src={item.mainimg}
                     alt="hi"
-                    style={{ width: "120px", height: "120px  " }}
+                    style={{
+                      width: "120px",
+                      height: "120px",
+                      marginTop: 15,
+                    }}
                   />
                 </div>
               </div>

@@ -20,7 +20,7 @@ const initState = {
 const reducer = (state = initState, { type, isauth, res, payload, data }) => {
   switch (type) {
     case GOOGLE_AUTH: {
-      getAuth("auth", true);
+      getAuth("auth", res);
       return {
         ...state,
         isauth: res,
