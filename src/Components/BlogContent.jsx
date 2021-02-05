@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 import { FaTwitter, FaFacebook, FaLinkedin } from "react-icons/fa";
 import { BiLike, BiMessageRounded } from "react-icons/bi";
 import { BsBookmark } from "react-icons/bs";
-import { TemporaryDrawer } from "./Bar"
+import { TemporaryDrawer } from "./TemporaryDrawer"
 
 const BlogContent = ({content, handleLike, add}) => {
     const {dis, para, readtime, likes, id, response} = content

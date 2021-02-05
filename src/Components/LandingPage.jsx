@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react'
-import styles from "../Components/Styling/Landingpage.module.css"
+import styles from "./Styling/LandingPage.module.css"
 import { TrendingStories } from "../Components/TrendingStories"
 import { Link } from "react-router-dom"
 import { useDispatch } from "react-redux"
-import { fetchTrending } from "../redux/Trendings/actions.js"
+import { fetchTrending } from "../Redux/trendings/actions.js"
 import { AiOutlineCheckCircle } from "react-icons/ai";
-import { Bottom } from "./Bottom"
+import  Bottom  from "./Bottom"
+import { Navbar } from './Navbar'
 
 const LandingPage = () => {
 
@@ -16,9 +17,9 @@ useEffect(() => {
 }, [dispatch]);
 
 
-
     return (
         <>
+        <Navbar />
             <div className = {styles.get_started}>
                 <div>
                     <img className = {styles.background} src = "https://miro.medium.com/max/770/1*qcAZgT4Sk37MPSTGBH2KUw.png" alt = "background" />

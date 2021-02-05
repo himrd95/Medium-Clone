@@ -12,7 +12,7 @@ import { red } from '@material-ui/core/colors';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
-import styles from "./Styling/response.module.css"
+import styles from "./Styling/Response.module.css"
 
 
 const useStyles = makeStyles((theme) => ({

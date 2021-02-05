@@ -1,13 +1,13 @@
 import React, {useEffect, useState} from 'react'
-import { BlogNavbar } from '../Routes/BlogNavbar'
+import { BlogNavbar } from './BlogNavbar'
 import { useSelector, useDispatch } from "react-redux"
 import { useParams } from "react-router-dom"
 import styles from "../Components/Styling/BlogPage.module.css"
 import { BlogContent } from './BlogContent'
 import { BlogStories } from './BlogStories'
 import { BlogFooter } from './BlogFooter'
-import { fetchTrending } from "../redux/Trendings/actions"
-import { handleLikeButton } from "./Utils/blogResponse.js"
+import { fetchTrending } from "../Redux/trendings/actions"
+import { handleLikeButton } from "./Utils/BlogResponse.js"
 
 
 const Blog = () => {
