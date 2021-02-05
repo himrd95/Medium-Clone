@@ -1,0 +1,58 @@
+.sidebar{
+    width: 250px;
+    height: 500px;
+    border: 1px solid  #DEDEDC;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.userblock{
+    display: flex;
+    align-items: center;
+    
+}
+.userpic{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    margin: 15px;
+}
+
+.storylink{
+    text-decoration: none;
+    color: #696767;
+    font-size: 14px;
+}
+.storylink:hover{
+    color: black;
+}
+.stories{
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid  #DEDEDC;
+    height: 180px;
+    justify-content: space-evenly;
+    padding-left: 15px;
+}
+.reading{
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid  #DEDEDC;
+    height: 150px;
+    justify-content: space-evenly;
+    padding-left: 15px;
+}
+.signout{
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #DEDEDC;
+    height: 120px;
+    justify-content: space-evenly;
+    padding-left: 15px;
+}
+.privacy{
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    border-top: 1px solid #DEDEDC;
+    height: 40px;
+}
