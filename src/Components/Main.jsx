@@ -81,7 +81,6 @@ function Main() {
               textAlign: "left",
             }}
           />
-          <button onClick={() => dispatch(googleAuth(false))}>signout</button>
           {open&&<SideNavbar/>}
         </div>
       </div>

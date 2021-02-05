@@ -1,9 +1,9 @@
 import React, {useEffect} from 'react'
-import { BlogNavbar } from '../Routes/BlogNavbar'
+import { BlogNavbar } from './BlogNavbar'
 import { useSelector, useDispatch } from "react-redux"
 import { useParams } from "react-router-dom"
 import { postBlogData, getblogData } from "../Components/Utils/blogLocalStorage"
-import styles from "../Components/Styling/blogPage.module.css"
+import styles from "./Styling/BlogPage.module.css"
 import { BlogContent } from './BlogContent'
 import { BlogStories } from './BlogStories'
 import { BlogFooter } from './BlogFooter'

@@ -1,8 +1,10 @@
 import React from 'react'
 import styles from "./Styling/sidenavbar.module.css"
 import { Link } from "react-router-dom"
+import { useDispatch } from "react-redux"
+import { googleAuth } from '../Redux/signup/action'
 const SideNavbar = () => {
-    
+    const dispatch = useDispatch();
     return (
         <div className={styles.sidebar}>
             <div className={styles.userblock}>
@@ -13,7 +15,7 @@ const SideNavbar = () => {
                 </div>
             </div> 
             <div className={styles.stories}>
-                <Link className={styles.storylink}  to="">Write a story</Link>
+                <Link className={styles.storylink}  to="/write">Write a story</Link>
                 <Link className={styles.storylink} to="">Stories</Link>
                 <Link className={styles.storylink} to="">Stats</Link>
                 <Link className={styles.storylink} to="">Design your profile</Link>
@@ -29,7 +31,7 @@ const SideNavbar = () => {
             <div className={styles.signout}>
                 <Link className={styles.storylink} style={{color:"green"}} to="">Become a member</Link>
                 <Link className={styles.storylink}  to="">Help</Link>
-                <Link className={styles.storylink} to="/">Sign out</Link>
+                <Link className={styles.storylink} to="/" onClick={() => dispatch(googleAuth(false))}>Sign out</Link>
 
             </div> 
             <div className={styles.privacy}>
