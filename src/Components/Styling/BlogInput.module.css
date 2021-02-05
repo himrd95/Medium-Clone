@@ -1,0 +1,141 @@
+.newBlog {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+input [type="text"] {
+	width: 70%;
+	border: none;
+	outline: none;
+	border-bottom: 2px solid blue;
+	padding: 10px;
+}
+.hideInput {
+	display: none;
+}
+.showInput {
+	display: block;
+	/* margin-left: 23%; */
+	margin-top: 10px;
+}
+.hideOptions {
+	display: none;
+}
+.showOptions {
+	/* display: block; */
+	width: 30px;
+	height: 30px;
+	border-radius: 15px;
+	border: 1px solid #0000008a;
+	color: #0000008a;
+	outline: none;
+	margin-left: -65%;
+	background: white;
+	font-size: 25px;
+	font-weight: 10%;
+	position: relative;
+}
+.showOptions i {
+	font-size: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.hiddenBtn {
+	display: none;
+	margin-left: 50%;
+	margin-top: -10%;
+}
+.showBtn {
+	display: flex;
+	position: absolute;
+	margin-left: 50%;
+	margin-top: -30px;
+}
+::placeholder {
+	color: #b3b3b1;
+}
+.title_input {
+	display: flex;
+	justify-content: center;
+}
+.title {
+	font-family: medium-content-title-font, Georgia, Cambria, "Times New Roman", Times, serif;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1.25;
+	letter-spacing: 0;
+	color: rgba(0, 0, 0, .84);
+	border: none;
+	outline: none;
+	max-width: 740px;
+	padding-left: 20px;
+	padding-right: 20px;
+	width: 80%;
+	margin: auto;
+	font-size: 35px;
+}
+.subTitle_array {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.subTitle {
+	font-family: medium-content-title-font, Georgia, Cambria, "Times New Roman", Times, serif;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1.25;
+	letter-spacing: 0;
+	color: rgba(0, 0, 0, .84);
+	border: none;
+	outline: none;
+	width: 80%;
+	max-width: 740px;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-top: 17px;
+	font-size: 20px;
+	overflow: hidden;
+	word-break: break-word;
+}
+.hideSuccesPopup {
+	/* display: none; */
+	margin-top: -150px;
+	margin-left: 38%;
+	position: absolute;
+	transition: .1s;
+}
+.showSuccessPopup {
+	background: white;
+	width: fit-content;
+	padding: 100px 30px;
+	box-shadow: -1px 4px 400px 181px #2525253b;
+	border-radius: 5px;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 180px 38%;
+	transition: .3s;
+	/* box-shadow: 0 0 10px #000000; */
+}
+
+.showSuccessPopup i {
+	position: sticky;
+	z-index: 500;
+	margin-top: -150px;
+	color: green;
+	font-size: 100px;
+}
+.previewBtn {
+	width: 250px;
+	padding: 15px;
+	font-size: 18px;
+	background: green;
+	outline: none;
+	border: none;
+	color: white;
+	font-weight: 500;
+	border-radius: 7px;
+}
