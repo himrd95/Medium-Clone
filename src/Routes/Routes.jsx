@@ -9,7 +9,7 @@ import Signin from "../Components/Signin";
 import Search from "../Components/Search";
 import SavedBookmark from "../Components/SavedBookmark";
 import styles from "../Components/Styling/SavedBookmark.module.css";
-import Bookmarks from "../Components/Finalbook";
+import Finalbook from "../Components/Finalbook";
 
 const Routes = () => {
   const isauth = useSelector((state) => state.signup.isauth);
@@ -41,8 +41,8 @@ const Routes = () => {
         <Route exact path="/signin">
           <Signin />
         </Route>
-        <Route exact path="/book">
-          <Bookmarks />
+        <Route path="/book/saved">
+          <Finalbook />
         </Route>
         <Route exact path="/search/:query">
           <Search />
@@ -50,33 +50,7 @@ const Routes = () => {
         <Route exact path="/blogs/:id">
           <Blog />
         </Route>
-        {/* <Route exact path="/blog/saved">
-          <SavedBookmark />
-        </Route>
-        <Route exact path="/blog/archived">
-          <Bookmarks />
-          <div className={styles.archived}>
-            <img
-              src="https://miro.medium.com/max/270/1*qPUzAXPJBSGCvwG0o8UkQA.png"
-              alt=""
-            />
-            <div>
-              <div>
-                After you're finished with a saved story, tap the Archived to
-                store it here.
-              </div>
-              <button className={styles.archived_btn}>
-                Storing worth saving
-              </button>
-            </div>
-          </div>
-        </Route>
-        <Route exact path="/blog/heighlights">
-          <Bookmarks />
-        </Route>
-        <Route exact path="/blog/RecentlyViewed">
-          <SavedBookmark />
-        </Route> */}
+        
         <Route>
           <h1>404 not found</h1>
         </Route>

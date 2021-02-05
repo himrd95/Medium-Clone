@@ -7,7 +7,7 @@ import { getSearch } from "../Redux/signup/action";
 const SavedBookmark = () => {
   const data = useSelector((state) => state.signup.blog);
   const dispatch = useDispatch();
-  
+  // console.log(data)
   React.useEffect(() => {
     dispatch(getSearch());
   }, [dispatch]);
@@ -17,37 +17,31 @@ const SavedBookmark = () => {
   };
   return (
     <>
-      {/* <Finalbook /> */}
       {data
       .filter((item) => item.book === true)
       .map((item) => (
-      <div className={styles.card}>
+        <div className={styles.card}>
           <div>
-                <div key={item.id}>
-                    <h2 className={styles.title}>{item.title}</h2>
-                    <div className={styles.info}>
-                        <p>{item.readtime}</p>
-                        <p>{item.cats}</p>
-                    </div>
-                    <button onClick={() => handleRm(item.id)}>Remove</button>
-                </div>
-                
+              <div className={styles.title}>{ item.title}</div>
+              <div>{ item.des}</div>
+              <div className={styles.info}>
+                <div>{item.first_name} { item.last_name}</div>
+                  <div>12/11/2020</div>
+                <div>{item.readtime} </div>
+              </div>
               <div className={styles.footer}>
-                  <div>
+                  <div onClick={()=>handleRm(item.id)}>
                       <i class="far fa-minus-square"></i>
                       <div>Remove</div>
                   </div>
                   <div>
                       <i class="fas fa-archive"></i>
-                      <div>Achive</div>
+                      <div>Archive</div>
                   </div>
               </div>
-          </div>
-          <img
-            src={item.mainimg}
-            alt=""
-          />
-        </div>
+            </div>
+            <img src={item.mainimg} alt="name"/>
+      </div>
       ))}
     </>
   );
