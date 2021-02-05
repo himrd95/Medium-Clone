@@ -10,7 +10,6 @@ import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import { red } from '@material-ui/core/colors';
 import FavoriteIcon from '@material-ui/icons/Favorite';
-import ShareIcon from '@material-ui/icons/Share';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import styles from "./Styling/Response.module.css"
 
@@ -41,9 +40,19 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export const ResponseCard = ({response}) => {
+export const ResponseCard = ({response, profile}) => {
+
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
+  const { name, imageUrl } = profile
+
+  var dateObj = new Date();
+    const month = ["Jan", "Feb", "mar", "apr", "May", "June", "July", "Aug", "Sep","Oct", "Nov", "Dec"]
+    var m = dateObj.getUTCMonth(); 
+    var day = dateObj.getUTCDate();
+    var year = dateObj.getUTCFullYear();
+
+ let newdate = day + "-" + month[m] + "-" + year;
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
@@ -54,7 +63,7 @@ export const ResponseCard = ({response}) => {
       <CardHeader
         avatar={
           <Avatar aria-label="recipe" className={classes.avatar}>
-            R
+            <img src= {imageUrl} alt="img"/>
           </Avatar>
         }
         action={
@@ -62,8 +71,8 @@ export const ResponseCard = ({response}) => {
             <MoreVertIcon />
           </IconButton>
         }
-        title="Anonymous"
-        subheader="September 14, 2016"
+        title =  {name}
+        subheader= {newdate}
       />
       <CardContent className = {styles.card_content}>
         <Typography variant="body2" color="textSecondary" component="p">
@@ -75,7 +84,6 @@ export const ResponseCard = ({response}) => {
           <FavoriteIcon />
         </IconButton>
         <IconButton aria-label="share">
-          <ShareIcon />
         </IconButton>
         <IconButton
           className={clsx(classes.expand, {

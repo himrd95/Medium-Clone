@@ -12,8 +12,10 @@ import { TrendingStories } from "./TrendingStories";
 import styles from "./Styling/LandingPage.module.css";
 import { AiOutlineCheckCircle } from "react-icons/ai";
 import { FaTwitter } from "react-icons/fa";
+import { BsBell } from "react-icons/bs";
 import Bottom from "./Bottom";
 import SideNavbar from "./SideNavbar";
+import { greetingTime } from "greeting-time";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -32,19 +34,19 @@ function Main() {
   const blogs = useSelector((state) => state.signup.blog);
   const dispatch = useDispatch();
   const greetingTime = require("greeting-time");
-  const[open,setOpen] = React.useState(false)
+  const [open, setOpen] = React.useState(false);
   const getBlogs = () => {
     dispatch(getSearch());
   };
 
   React.useEffect(() => {
     getBlogs();
-    dispatch(getProfile());
+    // dispatch(getProfile());
   }, [dispatch, data]);
 
-  // React.useEffect(() => {
-  //   dispatch(getProfile());
-  // }, []);
+  React.useEffect(() => {
+    dispatch(getProfile());
+  }, []);
 
   const history = useHistory();
 
@@ -62,29 +64,36 @@ function Main() {
           <h2>{greetingTime(new Date())}</h2>
         </div>
         <div className="sec">
-          <input type="text" onChange={(e) => setQuery(e.target.value)} />
-          <BsSearch className="ico" onClick={() => enterPress(query)} />
+          <input
+            type="text"
+            placeholder="Search Medium"
+            onChange={(e) => setQuery(e.target.value)}
+          />
+          <BsSearch className="searchIcon" onClick={() => enterPress(query)} />
           <Link to="/book">
-            <BsBookmarks className="ico" />
+            <BsBookmarks className="searchIcon" />
           </Link>
-          <BiBell className="ico" />
-          <button className="upgrade">Upgrade</button>
+          <BsBell className="ico" />
+          <Button variant="outlined" color="primary">
+            Upgrade
+          </Button>
         </div>
-        <div onClick={()=>setOpen(prev=>!prev)}>
+        <div onClick={() => setOpen((prev) => !prev)}>
           <img
             src={data.imageUrl}
             alt="hi"
             style={{
               borderRadius: "50%",
-              width: "50px",
-              margin: "10px 0px 0px 0px",
+              width: "40px",
+              height: "40px",
+              margin: "15px 0px 10px 0px",
               textAlign: "left",
             }}
           />
         </div>
-        {open&&<SideNavbar/>}
+        {open && <SideNavbar  />}
       </div>
-      <div className="flex" onClick={()=>setOpen(false)}>
+      <div className="flex" onClick={() => setOpen(false)}>
         <div className="first">
           {blogs
             .filter((item) => item.id <= 1)
@@ -93,6 +102,7 @@ function Main() {
                 <img src={item.mainimg} alt="hi" />
                 <h2>{item.title}</h2>
                 <h4>{item.dis}</h4>
+                <p>{item.readtime}</p>
               </div>
             ))}
         </div>
@@ -116,7 +126,11 @@ function Main() {
                   <img
                     src={item.mainimg}
                     alt="hi"
-                    style={{ width: "120px", height: "120px  " }}
+                    style={{
+                      width: "120px",
+                      height: "120px",
+                      marginTop: 15,
+                    }}
                   />
                 </div>
               </div>
