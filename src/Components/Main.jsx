@@ -81,8 +81,8 @@ function Main() {
               textAlign: "left",
             }}
           />
-          {open&&<SideNavbar/>}
         </div>
+        {open&&<SideNavbar/>}
       </div>
       <div className="flex" onClick={()=>setOpen(false)}>
         <div className="first">

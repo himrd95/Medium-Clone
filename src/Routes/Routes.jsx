@@ -29,7 +29,7 @@ const Routes = () => {
         </Route>
         <Route exact path="/our-story"></Route>
         <Route exact path="/my-blog">
-          <BlogPreview/>
+          {/* <BlogPreview/> */}
         </Route>
         <Route exact path="/write">
           <BlogInput/>
