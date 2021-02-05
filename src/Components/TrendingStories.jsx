@@ -3,6 +3,8 @@ import styles from "./Styling/LandingPage.module.css"
 import { useSelector } from "react-redux"
 import { useHistory } from 'react-router-dom'
 
+import CircularProgress from '@material-ui/core/CircularProgress';
+
 const TrendingStories = () => {
         const details = useSelector(state => state.trend.details)
         const { data, isLoading } = details
@@ -12,10 +14,10 @@ const TrendingStories = () => {
         history.push(`/blogs/${id}`)
     }
 
-    return isLoading? (<div>...Loading</div>)
+    return isLoading? (<div style={{width:'fitContent', margin:'auto'}}><CircularProgress /></div>)
     :
     (
-        <div>
+        <div style={{display:'flex', justifyContent:'center', marginLeft:30}}>
         {
             data.filter((items) => items.id <= 6)
             .map((items) => (

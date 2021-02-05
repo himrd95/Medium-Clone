@@ -30,7 +30,7 @@ useEffect(() => {
             </div>
             <div className = {styles.trending}>
                 <h5><AiOutlineCheckCircle /> TRENDING ON MEDIUM</h5>
-                <div>
+                <div >
                    <TrendingStories />
                 </div>
             </div>
