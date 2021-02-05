@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
+
+.card{
+    display: flex;
+    width: 80%;
+    height: 150px;
+    margin: 15px 100px;
+    font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    align-items: center;
+    justify-content: space-between;
+}
+.content{
+    width:75%;
+    padding-right: 10px;
+}
+.profilepic{
+    display: flex;
+    align-items: center;
+    margin-bottom: -25px;
+}
+.profilepic >img{
+    width: 20px;
+    height: 20px;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    margin-right: 10px;
+}
+.profilepic>p{
+    font-size: 13px;
+}
+.mainimg >img{
+    width: 150px;
+    height:120px;
+    /* border: 1px solid black; */
+}
+.title{
+    text-align: left;
+}
+.title>h2{
+overflow: hidden;
+height: 33px;
+
+width: 100%;
+}
+.title>p{
+    overflow: hidden;
+    height: 20px;
+    width: 100%;
+    margin-top: -20px;
+    color: #757575;
+}
+.time{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: -20px;
+}
+.time p {
+    color: #757575;
+    font-size: 13px;
+}
+.topicbox{
+    display: flex;
+    width: 380px;
+    flex-wrap: wrap;
+    color: #757575;
+}
+.topic{
+    border: 1px solid  #e2dede;;
+    padding: 6px 15px;
+    margin: 5px;
+    font-size: 12px;
+    border-radius: 3px;
+}
+.linkbox{
+    margin: 20px 5px;
+    height: 50px;
+   border-bottom: 1px solid #ebe5e5;
+}
+.topicContainer{
+    margin: 0 50px;
+}
