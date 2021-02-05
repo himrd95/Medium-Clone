@@ -14,7 +14,7 @@ const Bottom = () => {
     return (
         <div style={{display:"flex",justifyContent:"space-evenly"}}>
             <div>
-                {data.map((item)=>(
+                {data?.map((item)=>(
                     <Bottomleft key ={item.id} {...item}/>
                 ))}
             </div>

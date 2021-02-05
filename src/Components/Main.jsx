@@ -32,7 +32,7 @@ function Main() {
   const blogs = useSelector((state) => state.signup.blog);
   const dispatch = useDispatch();
   const greetingTime = require("greeting-time");
-
+  const[open,setOpen] = React.useState(false)
   const getBlogs = () => {
     dispatch(getSearch());
   };
@@ -52,7 +52,7 @@ function Main() {
     history.push(`/search/${query}`);
   };
   return (
-    <div className="main  ">
+    <div className="main">
       <div className="nav">
         <div className="med">
           <img
@@ -70,7 +70,7 @@ function Main() {
           <BiBell className="ico" />
           <button className="upgrade">Upgrade</button>
         </div>
-        <div>
+        <div onClick={()=>setOpen(prev=>!prev)}>
           <img
             src={data.imageUrl}
             alt="hi"
@@ -82,9 +82,10 @@ function Main() {
             }}
           />
           <button onClick={() => dispatch(googleAuth(false))}>signout</button>
+          {open&&<SideNavbar/>}
         </div>
       </div>
-      <div className="flex">
+      <div className="flex" onClick={()=>setOpen(false)}>
         <div className="first">
           {blogs
             .filter((item) => item.id <= 1)

@@ -29,7 +29,7 @@ const SideNavbar = () => {
             <div className={styles.signout}>
                 <Link className={styles.storylink} style={{color:"green"}} to="">Become a member</Link>
                 <Link className={styles.storylink}  to="">Help</Link>
-                <Link className={styles.storylink} to="">Sign out</Link>
+                <Link className={styles.storylink} to="/">Sign out</Link>
 
             </div> 
             <div className={styles.privacy}>
