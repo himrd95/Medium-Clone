@@ -1,0 +1,51 @@
+.slidebar h1{
+    margin-left: 15px;
+}
+
+.form {
+    position: relative;
+    border: none;
+    border-radius: 1px;
+    background-color: white;
+    box-shadow:  7px 7px 41px #cdd2d3,
+             -7px -7px 41px #ffffff;
+    padding: 2%;
+    margin: 4% 2%;
+    height: fit-content;
+}
+
+.form textarea{
+    width: 80%;
+    height: 20px;
+    display: block;
+    padding: 4%;
+    margin: 10px auto;
+    border: none;
+    border-radius: 1px;
+    background: white;
+    box-shadow:  7px 7px 41px #cdd2d3,
+             -7px -7px 41px #ffffff;
+}
+.form_btn{
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-left: 100px;
+}
+.form Button{
+    /* position: absolute; */
+    font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    right: 15px;
+    margin-top: 10px;
+    margin-left: 15px;
+    height: 32px;
+    font-size: 12px;
+}
+.form Button:nth-child(2){
+    background: rgb(26, 137, 23);
+}
+.card_content{
+    background-color: whitesmoke!important;
+    margin: 0 5px;
+}
