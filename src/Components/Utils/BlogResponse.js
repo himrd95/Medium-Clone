@@ -15,3 +15,5 @@ export const postResponse = (payload, id) => {
 export const getResponse = (id) => {
     return axios.get(`https://protected-mesa-68876.herokuapp.com/medium/${id}`)
 }
+
+

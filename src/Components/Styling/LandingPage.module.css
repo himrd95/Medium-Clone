@@ -1,23 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap");
 
 .get_started {
 	background-color: #ffc017;
-	height: 335px;
+	height: 500px;
 	border-bottom: 1px solid black;
 }
 .get_started div {
-	padding: 3% 6%;
+	padding: 6% 6%;
 	width: 40%;
 	line-height: 58px;
 }
 .get_started div p {
-	font-family: 'EB Garamond', serif;
+	font-family: "EB Garamond", serif;
 	font-size: 70px;
 	margin: 0;
 }
 .get_started div h3 {
-	font-family: 'Noto Sans JP', sans-serif;
+	font-family: "Noto Sans JP", sans-serif;
 	color: rgba(41, 41, 41, 1);
 	font-size: 14px;
 	line-height: 20px;
@@ -34,8 +34,6 @@
 .trending {
 	padding: 3% 6%;
 	border-bottom: 1px solid grey;
-	width: fit-content;
-	margin: auto;
 }
 
 .trending div {
@@ -44,10 +42,8 @@
 }
 
 .trending_stories {
-	position: relative;
 	width: 30%;
-	margin-top: 1%;
-	margin-right: 2%;
+	margin: 2% auto;
 	display: flex;
 	align-items: flex-start;
 	font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -55,7 +51,7 @@
 
 .background {
 	position: absolute;
-	top: 50px;
+	top: 150px;
 	right: 80px;
 	width: 27%;
 }
