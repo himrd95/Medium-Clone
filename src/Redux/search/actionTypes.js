@@ -1,0 +1,1 @@
+export const SEARCH_RES = "SEARCH_RES"

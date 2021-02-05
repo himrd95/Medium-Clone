@@ -1,0 +1,137 @@
+.nav {
+  display: flex;
+  margin-top: 30px;
+}
+
+.nav > div > img {
+  margin: 10px 10px 10px 120px;
+  width: 200px;
+  height: 50px;
+}
+
+.signin {
+  text-align: center;
+  margin: 70px auto;
+  padding: 10px;
+  width: 600px;
+  height: 550px;
+  border: 1px solid grey;
+  border-radius: 8px;
+}
+
+.icon {
+  margin: 1px 0px 0px 300px;
+  font-size: larger;
+  color: black;
+}
+
+.upgrade {
+  background-color: green;
+  color: white;
+  border-radius: 5px;
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  font-size: 15px;
+  margin: auto;
+}
+
+.sec {
+  padding: 18px;
+}
+
+.ico {
+  margin: 8px 4px 0px 4px;
+}
+
+.sec :hover {
+  cursor: pointer;
+}
+
+.card {
+  width: 400px;
+  height: 400px;
+  margin: 20px 50px;
+}
+
+.card img {
+  width: 300px;
+  height: 250px;
+}
+
+.card h4 {
+  color: grey;
+}
+
+.med {
+  display: flex;
+  flex-wrap: wrap;
+  width: 750px;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  /* margin: 10px 150px; */
+}
+
+.twitbtn {
+  background-color: white;
+  width: 200px;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 15px;
+  border: 0.5px solid grey;
+  display: flex;
+  margin: 20px auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.twitbtn p {
+  margin-top: 10px;
+}
+.twitter {
+  text-align: center;
+  margin: 100px 0px 0px 100px;
+  /* align-items: center; */
+}
+
+.second {
+  width: 370px;
+  height: 140px;
+  display: flex;
+  padding: 5px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.second img {
+  width: 100px;
+  height: 70px;
+}
+
+.avatar > img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.avatar {
+  width: 150px;
+  margin-bottom: 0px;
+}
+
+.first {
+  margin: 10px 10px 0px 100px;
+}
+
+.first img {
+  width: 400px;
+  height: 350px;
+}
+
+.searchcards {
+  margin: 50px 50px 20px 350px;
+}
