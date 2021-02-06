@@ -11,13 +11,23 @@ function Login() {
     history.push("/");
   };
   return (
-    <div className="signin">
-      <IoMdCloseCircle className="icon" onClick={closeSign} />
-      <h2>Join Medium</h2>
-      <Google />
-      <Fblogin />
+    // <div className="signin">
+    //   <IoMdCloseCircle className="icon" onClick={closeSign} />
+    //   <h2>Join Medium</h2>
+    //   <Google />
+    //   <Fblogin />
 
-      <h3>Already have an Account</h3>
+    //   <h3>Already have an Account</h3>
+    // </div>
+    <div className="signin">
+      <div className="form">
+        <IoMdCloseCircle className="icon" onClick={closeSign} />
+        <h2>Join Medium</h2>
+        <Google />
+        <Fblogin />
+
+        <h3>Already have an Account</h3>
+      </div>
     </div>
   );
 }

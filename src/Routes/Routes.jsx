@@ -12,6 +12,7 @@ import SavedBookmark from "../Components/SavedBookmark";
 import styles from "../Components/Styling/SavedBookmark.module.css";
 import { BlogPreview } from "../Components/BlogPreview";
 import { Finalbook } from "../Components/Finalbook";
+import Show from "../Components/Show";
 
 const Routes = () => {
   const isauth = useSelector((state) => state.signup.isauth);
@@ -29,12 +30,17 @@ const Routes = () => {
         </Route>
         <Route exact path="/our-story"></Route>
         <Route exact path="/my-blog">
-          {/* <BlogPreview/> */}
+          <BlogPreview />
+        </Route>
+        <Route exact path="/my-blog/:userid">
+          <BlogPreview />
         </Route>
         <Route exact path="/write">
           <BlogInput />
         </Route>
-        <Route exact path="/sign-in"></Route>
+        <Route exact path="/sign-in">
+          <Show />
+        </Route>
         <Route exact path="/get-started">
           {isauth ? <Main /> : <Redirect to="/login" />}
         </Route>
@@ -52,9 +58,6 @@ const Routes = () => {
         </Route>
         <Route exact path="/search/:query">
           <Search />
-        </Route>
-        <Route exact path="/blogs/:id">
-          <Blog />
         </Route>
         <Route>
           <h1>404 not found</h1>

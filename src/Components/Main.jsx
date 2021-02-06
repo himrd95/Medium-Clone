@@ -41,12 +41,12 @@ function Main() {
 
   React.useEffect(() => {
     getBlogs();
-    // dispatch(getProfile());
+    dispatch(getProfile());
   }, [dispatch, data]);
 
-  React.useEffect(() => {
-    dispatch(getProfile());
-  }, []);
+  // React.useEffect(() => {
+  //   dispatch(getProfile());
+  // }, [dispatch]);
 
   const history = useHistory();
 
@@ -91,7 +91,7 @@ function Main() {
             }}
           />
         </div>
-        {open && <SideNavbar  />}
+        {open && <SideNavbar />}
       </div>
       <div className="flex" onClick={() => setOpen(false)}>
         <div className="first">

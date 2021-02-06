@@ -24,7 +24,7 @@ const SideNavbar = () => {
         <Link className={styles.storylink} to="/write">
           Write a story
         </Link>
-        <Link className={styles.storylink} to="">
+        <Link className={styles.storylink} to="/sign-in">
           Stories
         </Link>
         <Link className={styles.storylink} to="">

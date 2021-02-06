@@ -164,3 +164,34 @@
 .searchcards {
   margin: 50px 50px 20px 350px;
 }
+
+.signin {
+  text-align: center;
+  height: 1500px;
+  width: 100%;
+  /* border: 1px solid grey; */
+  /* box-shadow: 0 0 10px gray; */
+  background-image: url(https://cdn.hipwallpaper.com/i/62/26/HKoPzd.jpg);
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* top: 0; */
+  /* position: absolute; */
+  margin-top: -50px;
+}
+
+.form {
+  width: 40%;
+  padding: 50px;
+  box-shadow: -5px -5px 10px rgb(42, 39, 92), 5px 5px 10px rgb(21, 19, 49);
+  border-radius: 8px;
+  opacity: 0.9;
+  text-align: center;
+  margin: 120px auto;
+  padding: 10px;
+  width: 600px;
+  height: 550px;
+  border: 1px solid grey;
+  border-radius: 8px;
+  background: rgb(228, 220, 220);
+}

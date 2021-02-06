@@ -161,9 +161,8 @@ const BlogContent = ({ content, handleLike, add }) => {
 
   return !isLoading ? (
     <>
-      {console.log(data.response)}
       <div className={styles.img_div}>
-        <img src={data.mainimg} alt="pic" />
+        <img src={data.mainimg} alt="pic" style={{ marginLeft: "400px " }} />
       </div>
       <TemporaryDrawer id={id} state={state} toggleDrawer={toggleDrawer} />
       <div className={styles.content}>
@@ -195,7 +194,7 @@ const BlogContent = ({ content, handleLike, add }) => {
         {/* Main content */}
         <div className={styles.discription}>
           <div className={styles.heading}>
-            <p>{dis}</p>
+            <p style={{ maxWidth: "500px" }}>{dis}</p>
           </div>
           <div className={styles.content_details}>
             <div className={styles.read}>

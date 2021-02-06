@@ -65,7 +65,7 @@ function Search() {
           style={{
             width: "700px",
             height: "70px",
-            margin: "50px 300px 0px 180px ",
+            margin: "50px 0px 0px 345px ",
             fontSize: "40px",
           }}
         />

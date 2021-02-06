@@ -14,6 +14,7 @@ const Blog = () => {
     const [datas, setDatas] = useState([]);
     const [add, setAdd] = useState(0)
     const [allData, setAllData] = useState([]);
+    const [clicked, setClicked] = useState(false);
     const details = useSelector(state => state.trend.details)
     const params = useParams()
     const ID = Number(params.id)
@@ -24,8 +25,11 @@ const Blog = () => {
         const post = details.data.filter((items) => items.id === ID)
         setAllData(details.data)
         setDatas(post[0])
+        if(post[0] !== undefined){
+            setAdd(post[0].likes)
         }
-    }, [details]);    
+        }
+    }, [details]);
 
     useEffect(() => {
         dispatch(fetchTrending())
@@ -36,21 +40,25 @@ const Blog = () => {
     }
 
 const handleLike = () => {
-    setAdd(add => add + 1)
+    clicked? setAdd(add => add + 1) : setAdd(add => add - 1)
+    let count = Math.abs(datas.likes)
+    count = clicked? datas.likes++ : datas.like--
+    console.log(count)
+    console.log(datas.likes)
     const payload = {
         ...datas,
-        likes : datas.likes++
+        likes : count
     }
     handleLikeButton(payload, datas.id)
+    setClicked(!clicked)
 }
-
 
 return datas === undefined || datas.length === 0 ? ( <div></div>
     ):(
     <>
         <BlogNavbar />
         <div className = {styles.blog}>
-            <BlogContent content = {datas} handleLike = {handleLike} add = {add} reload = {reload}/>
+            <BlogContent content = {datas} handleLike = {handleLike} add = {add} reload = {reload} />
             <BlogStories allData = {allData} />
             <BlogFooter />
         </div>

@@ -22,6 +22,5 @@ export const userAuth = () => {
 }
 
 export const getUser = () => {
-    return axios.get(`https://protected-mesa-68876.herokuapp.com/users/1`)
+    return axios.get(`https://protected-mesa-68876.herokuapp.com/users`)
 }
-

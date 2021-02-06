@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Styling/Bookmarks.module.css";
 import { Link, Route, Switch } from "react-router-dom";
 import SavedBookmark from "./SavedBookmark";
+import { Navbar } from "../Routes/NavbarInput";
 
 const links = [
   {
@@ -24,6 +25,7 @@ const links = [
 const Finalbook = () => {
   return (
     <>
+      <Navbar />
       <div className={styles.container}>
         <h2>Reading list</h2>
         <div className={styles.headers}>

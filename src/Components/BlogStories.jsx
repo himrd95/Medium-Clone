@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import styles from "./Styling/BlogPage.module.css";
 import { useHistory } from "react-router-dom";
 
-const BlogStories = ({ allData }) => {
+const BlogStories = (props) => {
+  const { allData } = props;
   const [randomData, setrandomData] = useState([]);
   const history = useHistory();
   let num = Math.floor(Math.random() + 20);
@@ -10,7 +11,7 @@ const BlogStories = ({ allData }) => {
 
   useEffect(() => {
     setrandomData(
-      allData.filter((items) => items.id <= num && items.id >= min)
+      allData?.filter((items) => items.id <= num && items.id >= min)
     );
   }, []);
 

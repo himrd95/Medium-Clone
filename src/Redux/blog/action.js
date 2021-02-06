@@ -45,13 +45,12 @@ const getDataFailure = () => {
 export { postBlog_request, postBlog_success, postBlog_failure };
 
 
-export const postBlog = ( title, file, fields, time) => dispatch => {
+export const postBlog = ( title, file, content) => dispatch => {
     dispatch(postBlog_request())
     axios.post('https://protected-mesa-68876.herokuapp.com/blog', {
         title,
         file,
-        fields,
-        time
+        content
     })
         .then((res) => dispatch(postBlog_success()))
     .catch((err)=>dispatch(postBlog_failure(err)))

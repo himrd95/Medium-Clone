@@ -45,7 +45,7 @@ const TemporaryDrawer = ({state, toggleDrawer, id}) => {
     const userDetails = () => {
         getUser()
         .then((res) => {
-            setProfile(res.data.profileObj)
+            setProfile(res.data[res.data.length-1].profileObj)
             setLoad(false)
         })
         .catch(err => console.log(err))
@@ -57,6 +57,7 @@ const TemporaryDrawer = ({state, toggleDrawer, id}) => {
             setData(res.data)
             setResponse(res.data.response)
             setIsLoading(false)
+            console.log(res.data)
         })
     }
 
@@ -89,22 +90,20 @@ const TemporaryDrawer = ({state, toggleDrawer, id}) => {
 
               />
               <div className = {styles.form_btn} style = {hidden? {display : "none"} : {display : "flex"}}>
-              <Button onClick = {() => setHidden(!hidden)} variant="contained" color = "">Cancel</Button>
+              <Button onClick = {() => setHidden(!hidden)} variant="contained">Cancel</Button>
                 <Button onClick = {postData} variant="contained" color = "primary">Respond</Button>
               </div>
           </div>
           {
             !load && response?.map((items) => (
               <div>
-              <ResponseCard key = {items} response = {items} profile = {profile}/>
-
+              <ResponseCard key = {Math.random() * 500} response = {items} profile = {profile}/>
               </div>
             ))
           }
       </div>
       </>
     );
-
 
   return (
     <div>
