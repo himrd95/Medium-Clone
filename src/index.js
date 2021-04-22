@@ -5,14 +5,15 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import store from './Redux/store';
 import { Provider } from 'react-redux';
-import { BrowserRouter } from 'react-router-dom';
+//import { BrowserRouter } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom'
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store = {store}>
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <Router basename={process.env.PUBLIC_URL}>
         <App />
-        </BrowserRouter>
+        </Router>
       </Provider>
   </React.StrictMode>,
   document.getElementById('root')
