@@ -5,7 +5,6 @@ import { useHistory } from "react-router-dom";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import { setRecent } from "../Redux/trendings/actions";
 
-
 const TrendingStories = () => {
   const details = useSelector((state) => state.trend.details);
   const { data, isLoading } = details;
@@ -50,7 +49,7 @@ const TrendingStories = () => {
               </div>
               <div>
                 <h3
-                  style={{ margin: 0 }}
+                  style={{ margin: 0, textAlign: "left" }}
                   onClick={() => redirectUser(items.id)}
                 >
                   {items.title}

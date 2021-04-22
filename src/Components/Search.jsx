@@ -63,10 +63,10 @@ function Search() {
           type="text"
           onChange={(e) => dispatch(searchSuc(e.target.value))}
           style={{
-            width: "700px",
-            height: "70px",
-            margin: "50px 0px 0px 345px ",
-            fontSize: "40px",
+            width: "50%",
+            height: "70%",
+            margin: "1% 0% 0% 20% ",
+            fontSize: "400%",
           }}
         />
       </div>
@@ -117,7 +117,12 @@ function Search() {
             </Card>
           ))}
         </div>
-        <div style={{ width: "200px", margin: "100px 100px 0px 100px" }}>
+        <div
+          style={{
+            width: "15% ",
+            margin: "10% 5% 0% 1%",
+          }}
+        >
           <Searchright />
         </div>
       </div>
