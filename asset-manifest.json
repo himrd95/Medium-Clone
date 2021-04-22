@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/medium-clone/static/css/main.42858c8f.chunk.css",
-    "main.js": "/medium-clone/static/js/main.4e022d93.chunk.js",
-    "main.js.map": "/medium-clone/static/js/main.4e022d93.chunk.js.map",
-    "runtime-main.js": "/medium-clone/static/js/runtime-main.d9edac3d.js",
-    "runtime-main.js.map": "/medium-clone/static/js/runtime-main.d9edac3d.js.map",
-    "static/css/2.86e65bd8.chunk.css": "/medium-clone/static/css/2.86e65bd8.chunk.css",
-    "static/js/2.7717b8eb.chunk.js": "/medium-clone/static/js/2.7717b8eb.chunk.js",
-    "static/js/2.7717b8eb.chunk.js.map": "/medium-clone/static/js/2.7717b8eb.chunk.js.map",
-    "static/js/3.72afd3d9.chunk.js": "/medium-clone/static/js/3.72afd3d9.chunk.js",
-    "static/js/3.72afd3d9.chunk.js.map": "/medium-clone/static/js/3.72afd3d9.chunk.js.map",
-    "index.html": "/medium-clone/index.html",
-    "static/css/2.86e65bd8.chunk.css.map": "/medium-clone/static/css/2.86e65bd8.chunk.css.map",
-    "static/css/main.42858c8f.chunk.css.map": "/medium-clone/static/css/main.42858c8f.chunk.css.map",
-    "static/js/2.7717b8eb.chunk.js.LICENSE.txt": "/medium-clone/static/js/2.7717b8eb.chunk.js.LICENSE.txt",
-    "static/media/UploadIcon.svg": "/medium-clone/static/media/UploadIcon.469126df.svg"
+    "main.css": "/Foxtrot/static/css/main.3e85a93d.chunk.css",
+    "main.js": "/Foxtrot/static/js/main.8bd79760.chunk.js",
+    "main.js.map": "/Foxtrot/static/js/main.8bd79760.chunk.js.map",
+    "runtime-main.js": "/Foxtrot/static/js/runtime-main.214a9218.js",
+    "runtime-main.js.map": "/Foxtrot/static/js/runtime-main.214a9218.js.map",
+    "static/css/2.86e65bd8.chunk.css": "/Foxtrot/static/css/2.86e65bd8.chunk.css",
+    "static/js/2.7717b8eb.chunk.js": "/Foxtrot/static/js/2.7717b8eb.chunk.js",
+    "static/js/2.7717b8eb.chunk.js.map": "/Foxtrot/static/js/2.7717b8eb.chunk.js.map",
+    "static/js/3.72afd3d9.chunk.js": "/Foxtrot/static/js/3.72afd3d9.chunk.js",
+    "static/js/3.72afd3d9.chunk.js.map": "/Foxtrot/static/js/3.72afd3d9.chunk.js.map",
+    "index.html": "/Foxtrot/index.html",
+    "static/css/2.86e65bd8.chunk.css.map": "/Foxtrot/static/css/2.86e65bd8.chunk.css.map",
+    "static/css/main.3e85a93d.chunk.css.map": "/Foxtrot/static/css/main.3e85a93d.chunk.css.map",
+    "static/js/2.7717b8eb.chunk.js.LICENSE.txt": "/Foxtrot/static/js/2.7717b8eb.chunk.js.LICENSE.txt",
+    "static/media/UploadIcon.svg": "/Foxtrot/static/media/UploadIcon.469126df.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.d9edac3d.js",
+    "static/js/runtime-main.214a9218.js",
     "static/css/2.86e65bd8.chunk.css",
     "static/js/2.7717b8eb.chunk.js",
-    "static/css/main.42858c8f.chunk.css",
-    "static/js/main.4e022d93.chunk.js"
+    "static/css/main.3e85a93d.chunk.css",
+    "static/js/main.8bd79760.chunk.js"
   ]
 }
