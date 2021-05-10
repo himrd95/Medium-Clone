@@ -12,7 +12,7 @@ function Google() {
         buttonText="Sign in with Google"
         onSuccess={(res) => {
           dispatch(googleAuth(true));
-          console.log(res);
+          console.log(res.profileObj);
           dispatch(setUser(res.profileObj));
         }}
         cookiePolicy={"single_host_origin"}

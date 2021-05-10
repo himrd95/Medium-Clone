@@ -27,35 +27,35 @@ const SideNavbar = () => {
         <Link className={styles.storylink} to="/sign-in">
           Stories
         </Link>
-        <Link className={styles.storylink} to="">
+        <Link className={styles.storylink}>
           Stats
         </Link>
-        <Link className={styles.storylink} to="">
+        <Link className={styles.storylink}>
           Design your profile
         </Link>
-        <Link className={styles.storylink} to="">
+        <Link className={styles.storylink}>
           Settings
         </Link>
       </div>
       <div className={styles.reading}>
-        <Link className={styles.storylink} to="">
+        <Link className={styles.storylink}>
           Reading list
         </Link>
-        <Link className={styles.storylink} to="">
+        <Link className={styles.storylink}>
           Publications
         </Link>
-        <Link className={styles.storylink} to="">
+        <Link className={styles.storylink}>
           Control Your Recommendations
         </Link>
-        <Link className={styles.storylink} to="">
+        <Link className={styles.storylink}>
           Medium Partner Program
         </Link>
       </div>
       <div className={styles.signout}>
-        <Link className={styles.storylink} style={{ color: "green" }} to="">
+        <Link className={styles.storylink} style={{ color: "green" }}>
           Become a member
         </Link>
-        <Link className={styles.storylink} to="">
+        <Link className={styles.storylink}>
           Help
         </Link>
         <Link
@@ -67,13 +67,12 @@ const SideNavbar = () => {
         </Link>
       </div>
       <div className={styles.privacy}>
-        <Link className={styles.storylink} style={{ fontSize: "12px" }} to="">
+        <Link className={styles.storylink} style={{ fontSize: "12px" }}>
           Privacy
         </Link>
         <Link
           className={styles.storylink}
           style={{ fontSize: "12px", marginLeft: "10px" }}
-          to=""
         >
           Terms
         </Link>

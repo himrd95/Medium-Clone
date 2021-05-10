@@ -39,7 +39,7 @@ const Routes = () => {
           <BlogInput />
         </Route>
         <Route exact path="/sign-in">
-          <Show />
+        {isauth ? <Show /> : <Redirect to="/login" />}
         </Route>
         <Route exact path="/get-started">
           {isauth ? <Main /> : <Redirect to="/login" />}
