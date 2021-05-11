@@ -8,11 +8,11 @@ const links = [
     title: "",
   },
   {
-    to: "/our-story",
+    to: "",
     title: "Our Story",
   },
   {
-    to: "/membership",
+    to: "",
     title: "Membership",
   },
   {
